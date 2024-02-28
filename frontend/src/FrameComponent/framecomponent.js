@@ -10,7 +10,7 @@ const FrameComponent = (props) =>
   const [select,sselect]=useState();
   const AddgGoup=()=>
   {
-    axios.post("http://localhost:8000/addgroup/"+groupname+"/"+color)
+    axios.post("https://noteserver-tzg3.onrender.com/addgroup/"+groupname+"/"+color)
     .then((res)=>
     {
       if(res)
@@ -28,7 +28,7 @@ const FrameComponent = (props) =>
   }
   useEffect(()=>
   {
-    axios.post("http://localhost:8000/allgroups")
+    axios.post("https://noteserver-tzg3.onrender.com/allgroups")
     .then((res)=>
     {
       if(res.data)

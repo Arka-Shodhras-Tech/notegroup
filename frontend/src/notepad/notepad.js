@@ -11,7 +11,7 @@ const NotePad = (props) =>
     // console.log(date.toLocaleTimeString())
     const Send=()=>
     {
-      axios.post("http://localhost:8000/sendnotes/"+sessionStorage.group+"/"+note+"/"+date.toDateString()+"/"+date.toLocaleTimeString())
+      axios.post("https://noteserver-tzg3.onrender.com/sendnotes/"+sessionStorage.group+"/"+note+"/"+date.toDateString()+"/"+date.toLocaleTimeString())
       .then((res)=>
       {
         if(res)
@@ -23,7 +23,7 @@ const NotePad = (props) =>
     }
     useEffect(()=>
     {
-      axios.post("http://localhost:8000/notes/"+sessionStorage.group)
+      axios.post("https://noteserver-tzg3.onrender.com/notes/"+sessionStorage.group)
       .then((res)=>
       {
         if(res)
