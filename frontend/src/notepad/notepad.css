@@ -1,0 +1,85 @@
+.notepad
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #dae5f5;
+}
+.nav
+{
+    width: 100%;
+    height: 12vh;
+    background-color: rgb(6, 6, 100);
+    display: flex;
+}
+.nav1
+{
+    padding: 0.5% 0% 0 0.5%;
+}
+.body
+{
+    width: 100%;
+    height: 70vh;
+    /* display: flex;
+    overflow-y: auto; */
+    /* flex-direction: column-reverse; */
+}
+.textarea
+{
+    width: 76%;
+    height: 18vh;
+    padding-left: 0.5%;
+    position: fixed;
+    bottom: 0%;
+    z-index: 1;
+}
+.input
+{
+    height: 16vh;
+    width: 98%;
+    border-radius: 5px;
+    font-size: 20px;
+
+}
+.message
+{
+    /* max-width: 90%; */
+    height: fit-content;
+    /* display:grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(1,1fr); */
+    /* gap: 4px; */
+    margin: 2% 0% 0% 7%;
+    border-radius: 5px;
+    font-size: 25px;
+    background-color: white;
+
+}
+.message1
+{
+    /* max-width: 90%; */
+    height: fit-content;
+    /* display:grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(1,1fr); */
+    /* gap: 4px; */
+    margin: 0% 0% 2% 7%;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: white;
+    text-align: right;
+
+}
+.msg-arrow
+{
+    width: 30px;
+    position: fixed;
+    top: 93vh;
+    left: 95%;
+    z-index: 2;
+}
+.name
+{
+    font-size:50px;
+    color: white;
+    padding:1% 0 0 3%;
+}

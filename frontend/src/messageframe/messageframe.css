@@ -1,0 +1,71 @@
+.image-removebg-preview-1-icon {
+    height: 313px;
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    z-index: 1;
+  }
+  .remove-b-g-image {
+    width: 628px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 2px 0 0;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .pocket-notes1 {
+    margin: 0;
+    height: 59px;
+    position: relative;
+    font-size: inherit;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+    font-family: inherit;
+    display: inline-block;
+    z-index: 1;
+  }
+  .send-and-receive,
+  .use-pocket-notes {
+    margin: 0;
+  }
+  .send-and-receive-container {
+    height: 64px;
+    position: relative;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    line-height: 32px;
+    font-weight: 500;
+    color: #292929;
+    display: inline-block;
+    z-index: 1;
+  }
+  .message-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px 0;
+    max-width: 100%;
+    text-align: left;
+    font-size: 50px;
+    color: #000;
+    font-family: Roboto;
+  }
+  @media screen and (max-width: 1050px) {
+    .pocket-notes1 {
+      font-size: 30px;
+    }
+    .send-and-receive-container {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .pocket-notes1 {
+      font-size: 40px;
+    }
+  }
