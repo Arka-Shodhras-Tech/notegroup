@@ -1,7 +1,9 @@
+import dot from 'dotenv';
 import { MongoClient } from "mongodb";
+dot.config();
 let db; 
 async function connectToDB(cb){
-    const url = "mongodb+srv://tejasimma033:Teja2002@cluster0.74jcr0b.mongodb.net/?retryWrites=true&w=majority";
+    const url =process.env.database;
     const client = new MongoClient(url);
     await client.connect();
     db = client.db("NoteGroup");
