@@ -7,7 +7,6 @@ const FrameComponent = (props) =>
   const [groupname,sgroupname]=useState();
   const [color,scolor]=useState();
   const [data,sdata]=useState([])
-  const [select,sselect]=useState();
   const AddgGoup=()=>
   {
     axios.post("https://noteserver-tzg3.onrender.com/addgroup/"+groupname+"/"+color)

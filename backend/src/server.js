@@ -15,7 +15,7 @@ app.post('/addgroup/:groupname/:color',async(req,res)=>
     {
         if(details1)
         {
-            res.json(data="exist");
+            res.json("exist");
         }
         else
         {
