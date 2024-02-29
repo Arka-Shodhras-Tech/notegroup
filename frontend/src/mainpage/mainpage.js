@@ -12,7 +12,7 @@ const MainPage = (props) =>
       {
         !sessionStorage.id?
         <>
-        <main className="frame-main">
+        <main className="frame-main" onClick={sessionStorage.id=true}>
         <div className="frame-child1" />
         <MessageFrame imageRemovebgPreview1="/imageremovebgpreview-12@2x.png" />
         <div className="endtoend-encryption-parent">

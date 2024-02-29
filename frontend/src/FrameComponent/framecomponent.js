@@ -82,6 +82,7 @@ const FrameComponent = (props) =>
         </div>
       </div>
     </div>
+
             <div className="group-pop" id="group" style={{display:'none'}}>
             <h4>Create New group</h4>
             <h5>Group Name <input type="text" className="group-name-input" placeholder="Enter group name" onChange={(e)=>sgroupname(e.target.value)}/></h5>

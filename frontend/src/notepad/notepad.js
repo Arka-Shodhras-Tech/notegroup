@@ -38,7 +38,7 @@ const NotePad = (props) =>
     <>
       <div className="notepad">
         {
-          data.map((value) =>
+          data[0].map((value) =>
           (
             <>
               <div className="nav">
