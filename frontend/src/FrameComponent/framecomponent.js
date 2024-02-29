@@ -13,11 +13,11 @@ const FrameComponent = (props) =>
     axios.post("https://noteserver-tzg3.onrender.com/addgroup/"+groupname+"/"+color)
     .then((res)=>
     {
-      if(res)
+      if(res.data!=="exist")
       {
         alert("Sucessfully created group");
         window.location.reload(4)
-        document.getElementById('group').style.display="none";
+        sessionStorage.id=true;
       }
       else if(res.data==="exist")
       {
@@ -55,7 +55,7 @@ const FrameComponent = (props) =>
               data.map((value) =>
               (
                 
-                <div className="frame-parent3" onClick={()=>sessionStorage.group=value.Groupname} onClickCapture={()=>{sessionStorage.id=true}}>
+                <div className="frame-parent3" onClick={()=>{sessionStorage.group=value.Groupname;sessionStorage.id=true}} onClickCapture={()=>window.location.reload(0)}>
                   <nav className="encrypted-frame-parent" >
                     <div className="encrypted-frame">
                       <div className="encrypted-frame-child" style={{backgroundColor:`${value.Color}`}}>
@@ -76,14 +76,14 @@ const FrameComponent = (props) =>
           <div className="remove-image-frame-wrapper">
             <div className="remove-image-frame">
               <div className="remove-image-frame-child" />
-              <Link onClick={()=>document.getElementById('group').style.display="block"} className="vector-tool">+</Link>
+              <Link onClick={()=>{sessionStorage.removeItem('id')}} className="vector-tool">+</Link>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-            <div className="group-pop" id="group" style={{display:'none'}}>
+            {!sessionStorage.id&&<div className="group-pop" id="group">
             <h4>Create New group</h4>
             <h5>Group Name <input type="text" className="group-name-input" placeholder="Enter group name" onChange={(e)=>sgroupname(e.target.value)}/></h5>
             <ul style={{display:'flex',justifyContent:'space-around'}}>
@@ -119,6 +119,7 @@ const FrameComponent = (props) =>
           </div>
           
           </div>
+}
     </>
     
   );

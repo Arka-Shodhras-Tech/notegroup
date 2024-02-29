@@ -36,9 +36,9 @@ const NotePad = (props) =>
     })
   return (
     <>
-      <div className="notepad">
+      <div className="notepad" >
         {
-          data[0].map((value) =>
+          data.map((value) =>
           (
             <>
               <div className="nav">
@@ -54,7 +54,7 @@ const NotePad = (props) =>
                 </div>
               </div>
 
-              <div className="body">
+              <div className="body" onClick={()=>{sessionStorage.id=true}}>
                 {
                   value.Notes && value.Notes.map((val) =>
                   (
