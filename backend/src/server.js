@@ -10,12 +10,22 @@ app.get('/',(req,res)=>{
 
 app.post('/addgroup/:groupname/:color',async(req,res)=>
 {
-    await db.collection("Groups").insertOne({Groupname:req.params.groupname,Color:req.params.color})
-    .then((details)=>
+    await db.collection("Groups").findOne({Groupname:req.params.groupname})
+    .then(async(details1)=>
     {
-        res.json(details)
+        if(details1)
+        {
+            res.json(data="exist");
+        }
+        else
+        {
+            await db.collection("Groups").insertOne({ Groupname: req.params.groupname, Color: req.params.color })
+                .then((details) => {
+                    res.json(details)
+                })
+                .catch((e) => console.log(e));
+        }
     })
-    .catch((e)=>console.log(e));
 })
 
 app.post('/allgroups',async(req,res)=>

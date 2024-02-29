@@ -19,6 +19,10 @@ const FrameComponent = (props) =>
         window.location.reload(4)
         document.getElementById('group').style.display="none";
       }
+      else if(res.data==="exist")
+      {
+        alert("Already Exist");
+      }
       else
       {
         alert("Try again")
